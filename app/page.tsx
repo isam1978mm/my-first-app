@@ -1,9 +1,11 @@
-'use client';
+import React from 'react';
 
-export default function Page() {
+const HomePage = () => {
   return (
-    <main>
-      <h1>Hello from my first Next.js app!</h1>
-    </main>
+    <div>
+      <h1>Welcome to my Next.js App!</h1>
+    </div>
   );
-}
+};
+
+export default HomePage;
