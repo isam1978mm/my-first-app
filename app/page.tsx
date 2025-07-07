@@ -1,12 +1,18 @@
-// Make sure you have a function that returns JSX (your page content)
-const MyPage = () => {
-  return (
-    <div>
-      <h1>Hello, World!</h1>
-      <p>This is my first Next.js app.</p>
-    </div>
-  );
-};
+'use client';
 
-// The most important line: export the component as the default
-export default MyPage;
+import { sendGTMEvent } from '@next/third-parties/google';
+
+export default function Page() {
+  return (
+    <main>
+      <h1>Hello from my first Next.js app!</h1>
+      <button
+        onClick={() =>
+          sendGTMEvent({ event: 'cta_click', label: 'Try Now CTA' })
+        }
+      >
+        Try Now
+      </button>
+    </main>
+  );
+}
