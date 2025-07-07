@@ -1,17 +1,18 @@
 import './globals.css';
-import { GoogleTagManager } from '@next/third-parties/google';
+import { ReactNode } from 'react';
+import ThirdParties from './third-parties';
 
 export const metadata = {
-  title: 'My App',
-  description: 'My First Next.js App',
+  title: 'My First App',
+  description: 'Next.js + GTM with third-parties',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
+        <ThirdParties />
         {children}
-        <GoogleTagManager gtmId="GTM-TKTJ7VXH" /> {/* Replace with your GTM ID */}
       </body>
     </html>
   );
